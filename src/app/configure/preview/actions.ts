@@ -52,7 +52,7 @@ export const createCheckoutSession = async ({
     name: "Custom iphone case",
     images: [configuration.imageUrl],
     default_price_data: {
-      currency: "USD",
+      currency: 'INR',
       unit_amount: price,
     },
   });
@@ -63,7 +63,7 @@ export const createCheckoutSession = async ({
     payment_method_types: ["card"],
     mode: "payment",
     shipping_address_collection: {
-      allowed_countries: ["IN", "GE", "DE", "US"],
+      allowed_countries: ["IN", "DE", "US"],
     },
     metadata: {
       userId: user.id,
