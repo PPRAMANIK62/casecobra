@@ -44,5 +44,6 @@ export function constructMetadata({
       creator: "@PPramanik13941",
     },
     icons,
+    metadataBase: new URL("https://casecobra-phi-three.vercel.app"),
   };
 }
