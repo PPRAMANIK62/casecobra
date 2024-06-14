@@ -27,15 +27,8 @@ const page = async () => {
   const user = await getUser();
 
   const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
-  const ADMIN_EMAIL_2 = process.env.ADMIN_EMAIL_2;
 
-  if (
-    !user ||
-    !user.email ||
-    user.email !== ADMIN_EMAIL ||
-    user.email !== ADMIN_EMAIL_2
-  )
-    return notFound();
+  if (!user || !user.email || user.email !== ADMIN_EMAIL) return notFound();
 
   const orders = await db.order.findMany({
     where: {
